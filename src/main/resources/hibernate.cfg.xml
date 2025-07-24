@@ -18,8 +18,10 @@
 
         <mapping class="org.manish07.student.Students"/>
         <mapping class="org.manish07.student.Address"/>
-        <mapping class="org.manish07.OneTOOne.Answer"/>
-        <mapping class="org.manish07.OneTOOne.Question"/>
+        <mapping class="org.manish07.OneToMany.Answer"/>
+        <mapping class="org.manish07.OneToMany.Question"/>
+        <mapping class="org.manish07.ManyToMany.project"/>
+        <mapping class="org.manish07.ManyToMany.emp"/>
     </session-factory>
 </hibernate-configuration>
 

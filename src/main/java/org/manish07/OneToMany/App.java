@@ -1,4 +1,4 @@
-package org.manish07.OneTOOne;
+package org.manish07.OneToMany;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

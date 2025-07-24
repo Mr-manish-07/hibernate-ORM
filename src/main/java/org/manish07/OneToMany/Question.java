@@ -1,4 +1,4 @@
-package org.manish07.OneTOOne;
+package org.manish07.OneToMany;
 
 import jakarta.persistence.*;
 
@@ -7,7 +7,7 @@ import java.util.List;
 @Entity
 public class Question {
     
-    @Idz > (x > y ? x : y) ? z : ((x > y) ? x : y)
+    @Id
     @Column(name = "q_id")
     private int id;
     
