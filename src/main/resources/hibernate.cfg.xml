@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/hiber</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">Manish@7200</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hibernate.use_sql_comments">false</property>
+<!--        <property name="show_sql">true</property>-->
+<!--        <property name="hibernate.format_sql">true</property>-->
+
+        <mapping class="org.manish07.student.Students"/>
+        <mapping class="org.manish07.student.Address"/>
+        <mapping class="org.manish07.OneTOOne.Answer"/>
+        <mapping class="org.manish07.OneTOOne.Question"/>
+    </session-factory>
+</hibernate-configuration>
+
+
+
+
+
+
+
+
+
+
+
+<!--<hibernate-configuration>-->
+<!--    <session-factory>-->
+
+<!--        &lt;!&ndash;        Database configuration          &ndash;&gt;-->
+<!--        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hiber</property>-->
+<!--        <property name="hibernate.connection.username">postgres</property>-->
+<!--        <property name="hibernate.connection.password">Manish@7200</property>-->
+<!--        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>-->
+
+<!--        &lt;!&ndash;        Hibernate Configuration        &ndash;&gt;-->
+<!--        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>-->
+<!--        <property name="hibernate.show_sql">true</property>-->
+<!--        <property name="hibernate.format_sql">true</property>-->
+<!--        <property name="hibernate.hbm2ddl.auto">update</property>-->
+
+<!--        &lt;!&ndash;        XML / class mapping             &ndash;&gt;-->
+<!--        <mapping class="org.manish07.app.App"/>-->
+<!--    </session-factory>-->
+<!--</hibernate-configuration>-->

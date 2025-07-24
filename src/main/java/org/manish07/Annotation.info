@@ -1,0 +1,31 @@
+@Entity : It is used to mark any class as Entity
+@Table  : It is used to change the Value of table in database such as name
+@Id     : It is used to Make any column as Primary key in the table
+@GeneratedValue : It is used with Primary key , and its main purpose is to increase Value auto
+                    using internal Sequence
+@Column : It is used to column mapping , making some change in column value such as column name ,
+            nullable true , column length(varchar(50))
+@Transient : It is used to tell Hibernate that given field no need to save in db , this column
+                will be used for another operation not for saving into database
+@Temporal : It's use to specify that Data format should be save in given format
+@Lob  : It is used to tell that given field will contain a large value or its a large object
+
+SessionFactory is working as same as connection interface do as it was required DriverClass but here it
+    requires new Configuration class (which indicates hibernate.cfg.xml)
+    new Configuration().configure().buildSessionFactory();
+
+Every database command is available to sessionFactory.openSession , we need to use it for any CRUD opr.
+
+We can store it in a Session because it returns a Session and then we are good to go for operation
+
+session.persist (students);  , session.find(Students.class,id{121})
+
+Before hibernate 6 : we were using get and load now both is deprecated instead get we use find
+    or instead load we use byId , works same as get and load do
+    get return null if not found but load through ObjectNotFoundException
+    get keep cache in session of loaded object but load() for lazy loading
+
+@Embedded is used if we want extra column of another class filed , @Embeddable is used whose class i want
+    to use as extra column in that class. Suppose student want more column about certificate so Student
+    column Certificate will use @Embedded and Certificate class will use @Embeddable
+
