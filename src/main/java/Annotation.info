@@ -29,3 +29,13 @@ Before hibernate 6 : we were using get and load now both is deprecated instead g
     to use as extra column in that class. Suppose student want more column about certificate so Student
     column Certificate will use @Embedded and Certificate class will use @Embeddable
 
+@OneToOne is used for mapping One value with One value such as 1 person only have 1 adharcard
+    We need to use the whole class for which i want to use as foreign key such as
+    In person : @OneToOne private Adhar adhar ;
+    In Adhar  : @OneToOne(mappedBy = "adhar") ;
+
+@OneToMany is used when a person having multiple things such as a person can have more than
+    one assets , more than 1 laptop , 1 question can have more than 1 ans
+
+@ManyToMany is used when many thing map to many things , many employee could have multiple project to work
+    
