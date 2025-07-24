@@ -56,9 +56,8 @@ public class App {
         project5.setProjectId (205);
         
         List<emp> empList = Arrays.asList (emp, emp1, emp2);
-        List<project> projectList = Arrays.asList (project, project1, project2, project3, project4);
         
-        emp.setProjectList (projectList);
+        emp.setProjectList (Arrays.asList (project, project1, project2));
         emp1.setProjectList (Arrays.asList (project, project1));
         emp2.setProjectList (Arrays.asList (project3, project2, project5));
         

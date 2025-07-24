@@ -1,9 +1,6 @@
 package org.manish07.ManyToMany;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -15,6 +12,8 @@ public class emp {
     private String employeeName;
     
     @ManyToMany
+    @JoinTable(name = "project_assign",joinColumns = {@JoinColumn(name = "emp_id")} ,
+            inverseJoinColumns = {@JoinColumn(name = "project_id")})
     private List<project> projectList;
     
     public emp () {
